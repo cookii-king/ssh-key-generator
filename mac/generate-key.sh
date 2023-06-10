@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Ask for the email
-read -p "Enter your email: " email
-
 # Set key file names
 key_name="$(date '+%Y-%m-%d_%H-%M-%S')"
 folder_name="keys_$(date '+%Y-%m-%d_%H-%M-%S')"
@@ -18,8 +15,8 @@ pub_file="${folder_name}/${key_name}.pub"
 openssl genrsa -out $pem_file 2048
 chmod 600 $pem_file
 
-# Generate the corresponding public key (.pub) file in the standard format with the email as a comment
-ssh-keygen -t rsa -f $pem_file -y -C "$email" > temp_pub_file
+# Generate the corresponding public key (.pub) file in the standard format
+ssh-keygen -t rsa -f $pem_file -y > temp_pub_file
 public_key=$(<temp_pub_file)
 echo "$public_key" > $pub_file
 rm temp_pub_file
