@@ -33,3 +33,5 @@ echo "Files generated:"
 echo "  - $pem_file"
 echo "  - $ppk_file"
 echo "  - $pub_file"
+
+sudo rm -r generate-key.sh
