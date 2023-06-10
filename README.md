@@ -6,4 +6,6 @@ curl -sSL https://raw.githubusercontent.com/cookii-king/ssh-key-generator/main/m
 ```
 
 This is bare bones, to use on platform like gcp edit the .pub file and add you working account email address at the end like:
-```ssh-rsa you-key your-email@example.com```
+```
+ssh-rsa you-key your-email@example.com
+```
