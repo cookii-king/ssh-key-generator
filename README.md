@@ -1,4 +1,4 @@
-# ssh-key-generator.sh
+# ssh-key-generator
 
 run the one line cli command on mac
 ```
